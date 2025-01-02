@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #a0d9b6, #e0f7fa); /* Green-sky gradient */
+    color: #333;
+}
+
+/* Header and Navbar */
+header {
+    background: linear-gradient(to right, #4caf50, #00bcd4); /* Green-sky gradient */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    background: linear-gradient(to right, #4caf50, #00bcd4); /* Green-sky gradient */
+    border-bottom: 2px solid #00796b;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f08080;
+    transition: color 0.3s;
+}
+
+.navbar .navbar-brand:hover {
+    color: #f08080; /* Slightly red on hover */
+}
+
+.navbar-nav .nav-link {
+    color: #f08080;
+    margin-right: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f08080;
+    transform: scale(1.1);
+}
+
+/* Dropdown Menu Fixes */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: none; /* Hide by default */
+    position: absolute;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item {
+    padding: 10px;
+    color: #00695c;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item:hover {
+    background-color: #f08080;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #f08080; /* slightly red on hover */
+    margin-right: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f08080; /* Slightly red on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #00bcd4, #4caf50); /* Sky-green gradient */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #00796b;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Hyperlinks */
+a {
+    color: #00695c; /* Greenish hyperlink */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f08080; /* Slightly red on hover */
+}
+
+/* Club Info Section */
+.club-info {
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.club-info h5 {
+    color: #00695c; /* Dark green for headings */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.club-info p, 
+.club-info ul {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.club-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.club-info ul li {
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.club-info ul li:hover {
+    color: #f08080; /* Hover effect for list items */
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #4caf50; /* Green button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #f08080; /* Slightly red on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Section Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #00695c; /* Green headings */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin-right: 0;
+    }
+
+    .club-info {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}

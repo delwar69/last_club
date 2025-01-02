@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTV Officers Club</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        {% block navbar %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">BTV Officers Club</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- About Us Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="{% url 'about_club' %}">About Club</a></li>
+                                <li><a class="dropdown-item" href="{% url 'president' %}">President</a></li>
+                                <li><a class="dropdown-item" href="{% url 'secretary' %}">Secretary</a></li>
+                                <li><a class="dropdown-item" href="{% url 'former_president' %}">Former President</a></li>
+                                <li><a class="dropdown-item" href="{% url 'former_secretary' %}">Former Secretary</a></li>
+                                <li><a class="dropdown-item" href="{% url 'adhoc_committee' %}">Adhoc Committee</a></li>
+                                <li><a class="dropdown-item" href="{% url 'all_members' %}">All Members</a></li>
+                            </ul>
+                        </li>
+                        <!-- Service & Facilities Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Service & Facilities
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="{% url 'celebration' %}">Celebration</a></li>
+                                <li><a class="dropdown-item" href="{% url 'congratulations' %}">Congratulations</a></li>
+                            </ul>
+                        </li>
+                        <!-- Sports & Fitness Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="sportsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sports & Fitness
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="sportsDropdown">
+                                <li><a class="dropdown-item" href="{% url 'badminton' %}">Badminton</a></li>
+                                <li><a class="dropdown-item" href="{% url 'gym' %}">Gym</a></li>
+                                <li><a class="dropdown-item" href="{% url 'table_tennis' %}">Table Tennis</a></li>
+                                <li><a class="dropdown-item" href="{% url 'cards' %}">Card</a></li>
+                                <li><a class="dropdown-item" href="{% url 'squash' %}">Squash</a></li>
+                            </ul>
+                        </li>
+                        <!-- Contact -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                        <!-- New Member Registration -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'new_member_registration' %}">New Member Registration</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% endblock %}
+    </header>
+
+     <!-- Carousel -->
+     <div id="clubCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/carousel1.jpg' %}" class="d-block w-100" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Welcome to BTV Officers Club</h5>
+                    <p>Your hub for activities and events.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/carousel2.jpg' %}" class="d-block w-100" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Facilities and Sports</h5>
+                    <p>Explore our range of sports and fitness facilities.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/carousel3.jpg' %}" class="d-block w-100" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Join the Club</h5>
+                    <p>Register now to become a member.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#clubCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#clubCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <main>
+        {% block content %}
+        <!-- Page-specific content will go here -->
+        {% endblock %}
+    </main>
+
+    <!-- Additional Section Before Footer -->
+    <section class="club-info bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About the Club</h5>
+                    <p>Established: 2000</p>
+                    <p>Address: BTV, Rampura, Dhaka</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Facilities</h5>
+                    <ul>
+                        <li>Sports</li>
+                        <li>GYM</li>
+                        <li>Committee</li>
+                        <li>New Member Registration</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Focal Point: John Doe</p>
+                    <p>Phone: +880123456789</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2025 BTV Officers Club. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
