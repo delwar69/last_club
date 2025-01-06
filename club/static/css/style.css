@@ -27,7 +27,7 @@ header {
 }
 
 .navbar .navbar-brand:hover {
-    color: #f08080; /* Slightly red on hover */
+    color: #fff;
 }
 
 .navbar-nav .nav-link {
@@ -57,7 +57,7 @@ header {
 
 .navbar-nav .nav-item.dropdown .dropdown-item {
     padding: 10px;
-    color: #00695c;
+    color: rgba(0, 0, 0, 0.6); /* #00695c; */
 }
 
 .navbar-nav .nav-item.dropdown .dropdown-item:hover {
@@ -65,19 +65,38 @@ header {
     color: #fff;
 }
 
-.navbar-nav .nav-link {
-    color: #f08080; /* slightly red on hover */
-    margin-right: 15px;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #f08080; /* Slightly red on hover */
-    transform: scale(1.1); /* Slight zoom effect */
-}
-
 .navbar-toggler {
     border-color: #fff;
+}
+
+/* Carousel Section */
+.carousel-item img {
+    max-height: 350px; /* Set maximum height for images */
+    object-fit: cover; /* Ensures the images cover the area */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Add semi-transparent background */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.carousel-caption h5 {
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    font-size: 16px;
+    color: #f0f0f0;
+}
+
+/* Carousel Controls */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: transparent !important; /* Transparent on hover */
+    box-shadow: none; /* Remove any shadow effects */
 }
 
 /* Footer */

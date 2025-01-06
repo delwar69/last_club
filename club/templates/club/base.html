@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTV Officers Club</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     <!-- JavaScript and jQuery -->
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+ </head>
 </head>
 <body>
     <header>
@@ -66,7 +73,7 @@
                         </li>
                         <!-- New Member Registration -->
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'new_member_registration' %}">New Member Registration</a>
+                            <a class="nav-link" href="{% url 'new_member_registration' %}" target="_blank">New Member Registration</a>
                         </li>
                     </ul>
                 </div>
@@ -81,7 +88,7 @@
             <div class="carousel-item active">
                 <img src="{% static 'images/carousel1.jpg' %}" class="d-block w-100" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Welcome to BTV Officers Club</h5>
+                    <h5>Welcome to BTV Officers` Club</h5>
                     <p>Your hub for activities and events.</p>
                 </div>
             </div>
@@ -143,13 +150,21 @@
         </div>
     </section>
 
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>&copy; 2025 BTV Officers Club. All Rights Reserved.</p>
-        </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; {{ now.year }} BTV Officers Club. Follow us on 
+            <a href="https://facebook.com" class="text-white" target="_blank">Facebook</a>, 
+            <a href="https://twitter.com" class="text-white" target="_blank">Twitter</a>, and 
+            <a href="https://instagram.com" class="text-white" target="_blank">Instagram</a>.
+        </p>
     </footer>
 
     <!-- Scripts -->
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Add any custom JavaScript here
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

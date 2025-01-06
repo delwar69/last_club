@@ -1,2 +1,2 @@
-from django.template.loader import get_template
-print(get_template('base.html'))
+from reportlab.pdfbase import pdfmetrics
+print("pdfmetrics imported successfully")

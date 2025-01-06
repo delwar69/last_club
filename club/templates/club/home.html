@@ -6,40 +6,50 @@
     <p>Promoting Excellence and Fellowship</p>
 </div>
 
+<!-- About Section -->
 <div id="about" class="my-5">
     <h2>About Us</h2>
     <p>Details about the BTV Officers Club...</p>
 </div>
 
+<!-- Notice Board -->
 <div id="notices" class="my-5">
     <h2>Notice Board</h2>
     <ul>
         {% for notice in notices %}
             <li>{{ notice.title }} - {{ notice.date }}</li>
+        {% empty %}
+            <li>No notices available at the moment.</li>
         {% endfor %}
     </ul>
 </div>
 
+<!-- Committee Members -->
 <div id="committee" class="my-5">
     <h2>Committee Members</h2>
     <div class="row">
-        {% for member in members %}
+        {% for member in club_members %}
             <div class="col-md-3 text-center">
                 <img src="{{ member.image.url }}" class="img-fluid rounded-circle" alt="{{ member.name }}">
                 <h5>{{ member.name }}</h5>
                 <p>{{ member.position }}</p>
             </div>
+        {% empty %}
+            <p class="text-center">No committee members added yet.</p>
         {% endfor %}
     </div>
 </div>
 
+<!-- Gallery -->
 <div id="gallery" class="my-5">
     <h2>Gallery</h2>
     <div class="row">
         {% for image in gallery %}
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
                 <img src="{{ image.image.url }}" class="img-fluid" alt="{{ image.title }}">
             </div>
+        {% empty %}
+            <p class="text-center">No images in the gallery yet.</p>
         {% endfor %}
     </div>
 </div>
